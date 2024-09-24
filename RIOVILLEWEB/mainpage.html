@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="camping-content-map">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="title" content="RIOVILLE">
+    <meta property="description" content="">
+    <link rel="icon" type="image/png" sizes="16x16"  href="/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <title>RIOVILLE</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/startpage.js"></script>
+    <script src="./js/mainpage.js"></script>
+</head>
+<body>
+    <div id="startpage">
+        <div class="lobby-scroll"></div>
+        <div class="lobby-nav">
+            <p>TAP<br/>HERE<br/>TO START</p>
+        </div>
+    </div>
+
+    <div id="info">
+        <div id="paper">
+            <h1>리오빌 안내서<br/>Introduction</h1>
+            <p>지도 위 아이콘을 클릭하면<br/>리오빌의 다양한 컨텐츠를<br/>알 수 있리오!
+            <br/>다시 읽고 싶으면 <br/>리오빌 간판을 클릭하리오!</p>
+            <button id="paperclose" type="button">닫기</button>   
+        </div>
+    </div>
+
+    <div id="mainpage">
+        
+        <div class="curtain">
+            <div class="frontcurtain"></div>
+            <div class="backcurtain"></div>
+        </div>
+
+        <div id="main-map">
+            <img src="./images/rioville-map.png" height="100%">
+        </div>
+
+        <div id="icon-container">
+            
+            <div class="mapHeader">
+                <div class="not-in-map">
+                    <span class="banner"><img src="./images/rioville-banner.png" id="info-reactive" width="40%"></span>
+                    <span class="starmobile"><img src="./images/rioville-starmobile.png" width="100%"></span>
+                </div>
+            </div>
+        
+            <div class="booth-icons">
+                <div class="treasures">
+                    <button id="treasure1" type="button">
+                        <img src="./images/rioville-buriedstar.png" id="treasure1" width="40vw">
+                    </button>
+                    <button id="treasure2" type="button">
+                        <img src="./images/rioville-buriedstar.png" id="treasure2" width="40vw">
+                    </button>
+                    <button id="treasure3" type="button">
+                        <img src="./images/rioville-buriedstar.png" id="treasure1" width="40vw">
+                    </button>
+                    <button id="treasure4" type="button">
+                        <img src="./images/rioville-buriedstar.png" id="treasure1" width="40vw">
+                    </button>
+                </div>
+                <div class="booths">
+                    <div id="music-forest">
+                        <img src="./images/rioville-musicforest.png" style="width: 100%; transform: scale(1.2);">
+                    </div>
+                    <div id="camp">
+                        <img src="./images/rioville-camp.png" id="camp1" width="100%">
+                        <img src="./images/rioville-camp.png" id="camp2" width="100%">
+                        <img src="./images/rioville-camp.png" id="camp3" width="100%">
+                    </div>
+                    <div id="rioballoon">
+                        <img src="./images/rioville-rioballoon.png" width="100%">
+                    </div>
+                    <div id="taro">
+                        <img src="./images/rioville-taro.png" width="100%">
+                    </div>
+                    <div id="hyurim">
+                        <img src="./images/rioville-hyurim.png" width="100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="booth-papers">
+                <div id="mf-paper" class="hidden">
+                    <img src="./images/rioville-mfbg.png" width="100%">
+                    <h3>뮤직 포레스트</h3>
+                    <p>재즈, 밴드, 아카펠라까지!<br/><br/>낭만적인 공연도 보고<br/>이벤트에 참여해 <br/>귀여운 상품도 받아갈 수 있리오!</p>
+                    <button id="mfclose" type="button">닫기</button>
+                </div>
+                <div id="c-paper" class="hidden">
+                    <img src="./images/rioville-campbg.png" width="100%">
+                    <h3>리오빌 캠프</h3>
+                    <p>리오빌 여행자들의 쉼터!<br/><br/>아늑한 텐트에서<br/>잊지 못할 추억을 만들어보리오!</p>
+                    <button id="cclose" type="button">닫기</button>
+                </div>
+                <div id="t-paper" class="hidden">
+                    <img src="./images/rioville-tarobg.png" width="100%">
+                    <h3>점.zip</h3>
+                    <p>..수리수리 마수리오..<br/><br/>...연애, 학업, 건강...<br/>나의 올해 운세는?<br/>리오빌 마법사의<br/>타로점을 체험하리오!</p>
+                    <button id="tclose" type="button">닫기</button>
+                </div>
+                <div id="h-paper" class="hidden">
+                    <img src="./images/rioville-hyurimbg.png" width="100%">
+                    <h3>취한게 아니라<br/>마법에 걸린거야</h3>
+                    <p>휴림과 함께하는 비밀의 포션 상점!<br/><br/>--리오빌 여행자들의 필수 코스--<br/>나한테 꼭 맞는<br/>무알콜 포션을 만나리오!</p>
+                    <button id="hclose" type="button">닫기</button>
+                </div>
+                <div id="treasure-paper" class="hidden">
+                    <img src="./images/rioville-treasurebg.png" width="100%">
+                    <h3>한밤의 보물찾기!</h3>
+                    <p>맵 상 표시된 위치에<br/>숨겨져 있는 보물을 찾아<br/>상품을 받으리오!</p>
+                    <button id="treasure-close" type="button">닫기</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+@font-face {
+    font-family: 'DungGeunMo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#startpage {
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+#startpage.hidden {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+}
+.lobby-scroll {
+    width: 100vw;
+    height: 30vh;
+    background-image: url('/images/rioville-entrance.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.25);
+}
+.lobby-nav {
+    font-family: 'DungGeunMo', sans-serif;
+    color: black;
+    font-size: 2.5rem;
+}
+
+.curtain {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.frontcurtain {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/curtain-upper.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 51;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.frontcurtain.hidden {
+    transform: translateX(-10vw);
+    opacity: 0;
+    pointer-events: none;
+}
+.backcurtain {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/curtain.png');
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 50;
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+.backcurtain.hidden {
+    opacity: 0;
+    transform: translateX(10vw);
+    pointer-events: none;
+}
+
+
+#info {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    text-align: center;
+    position: absolute;
+    justify-content: center;
+    background-image: url('/images/rioville-scroll.png');
+    background-size: 100%;
+    background-position: center ;
+    z-index: 10;
+    transform: scaleY(0);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    pointer-events: none;
+}
+
+#info.open {
+    opacity: 1;
+    transform: scaleX(1);
+    pointer-events: auto;
+}
+
+#paper {
+    font-family: 'DungGeunMo', sans-serif;
+
+    h1 {
+        font-weight: 1000;
+        color: #7f0505;
+        text-shadow: whitesmoke 0 0 8px;
+    }
+
+    p {
+        margin-top: 6.5vh;
+        color: black;
+        text-shadow: whitesmoke 0 0 8px;
+        font-size: 1rem;
+    }
+}
+
+#paper button {
+    font-family: 'DungGeunMo', sans-serif;
+    font-weight: bold;
+    text-shadow: whitesmoke 0 0 8px;
+    font-size: large;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    z-index: 101;
+    cursor: pointer;
+}
+
+#paper button:hover {
+    box-shadow: 0vh 0vh 1vh #000;
+}
+#mainpage {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fceeb4;
+    filter: none;
+    -webkit-filter: none;
+    z-index: 0;
+}
+#mainpage.hidden {
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+#main-map {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#icon-container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    z-index: 1;
+}
+#icon-container.hidden {
+    opacity: 0;
+}
+.mapHeader {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+.not-in-map {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.banner {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: top;
+    margin: 0 10px 0 10px;
+    transform: scale(1.1);
+    z-index: 5;  
+}
+.starmobile {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.booth-icons {
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+}
+#treasure1 {
+    position: absolute;
+    left: 20%;
+    top: 75%;
+    filter: drop-shadow(0 3px 10px rgb(240, 255, 100));
+}
+#treasure2 {
+    position: absolute;
+    right: 13%;
+    top: 30%;
+    filter: drop-shadow(0 3px 10px rgb(240, 255, 100));
+}
+#treasure3 {
+    position: absolute;
+    right: 29%;
+    top: 80%;
+    filter: drop-shadow(0 3px 10px rgb(240, 255, 100));
+}
+#treasure4 {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    filter: drop-shadow(0 3px 10px rgb(240, 255, 100));
+}
+
+.booths {
+    width: 100%;
+}
+#music-forest {
+    position: absolute;
+    width: 40vw;
+    top: 37%;
+    right: 0;
+    filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
+}
+#rioballoon {
+    position: absolute;
+    width: 18vw;
+    top: 45%;
+    right: 38%;
+    filter: drop-shadow(0 5px 8px white)
+}
+#camp1 {
+    position: absolute;
+    width: 20vw;
+    top: 45%;
+    left: 20%;
+    z-index: 30;
+    filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
+}
+#camp2 {
+    position: absolute;
+    width: 20vw;
+    top: 54%;
+    left: 34%;
+    z-index: 30;
+    filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
+}
+#camp3 {
+    position: absolute;
+    width: 20vw;
+    top: 37%;
+    left: 35%;
+    z-index: 30;
+    filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
+}
+
+#taro {
+    position: absolute;
+    width: 18vw;
+    top: 35%;
+    left: 10%;
+    z-index: 30;
+    filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
+}
+#hyurim {
+    position: absolute;
+    width: 18vw;
+    top: 60%;
+    left: 10%;
+    z-index: 30;
+    filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
+}
+
+.booth-papers {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+#mf-paper {
+    position: absolute;
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    height: 60vh;
+    opacity: 1;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+
+    h3 {
+        font-size: x-large;
+        margin-bottom: 1vh
+    };
+
+    button {
+        margin-top: 1.5vh;
+        font-family: 'DungGeunMo', sans-serif;
+        color: rgb(255, 253, 114);
+        background-color: transparent;
+        border: none;
+        font-size: large;
+        pointer-events: all;
+
+        @media screen and (max-width: 768px) {
+            ::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 200%;
+                height: 200%;
+            };    
+        };
+    };
+}
+#mf-paper.hidden {
+    display: none;
+    pointer-events: none;
+    opacity: 0;    
+}
+
+#c-paper {
+    position: absolute;
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    opacity: 1;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+
+    h3 {
+        font-size: x-large;
+        margin-bottom: 1vh
+    };
+
+    button {
+        margin-top: 1vh;
+        font-family: 'DungGeunMo', sans-serif;
+        color: rgb(255, 253, 114);
+        background-color: transparent;
+        border: none;
+        font-size: large;
+        pointer-events: all;
+    };
+}
+#c-paper.hidden {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#t-paper {
+    position: absolute;
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    opacity: 1;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+
+    h3 {
+        font-size: x-large;
+        margin-bottom: 1vh
+    };
+
+    button {
+        margin-top: 1vh;
+        font-family: 'DungGeunMo', sans-serif;
+        color: rgb(255, 253, 114);
+        background-color: transparent;
+        border: rgb(255, 253, 114) solid 2px;
+        font-size: large;
+        pointer-events: all;
+    };
+}
+#t-paper.hidden {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#h-paper {
+    position: absolute;
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    opacity: 1;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+
+    h3 {
+        font-size: x-large;
+        margin-bottom: 1vh
+    };
+
+    button {
+        margin-top: 1vh;
+        font-family: 'DungGeunMo', sans-serif;
+        color: rgb(255, 253, 114);
+        background-color: transparent;
+        border: none;
+        font-size: large;
+        pointer-events: all;
+    };
+}
+#h-paper.hidden {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#treasure-paper {
+    position: absolute;
+    font-family: 'DungGeunMo', sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 60%;
+    opacity: 1;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 100;
+
+    h3 {
+        font-size: x-large;
+        margin-bottom: 1vh
+    };
+
+    button {
+        margin-top: 1vh;
+        font-family: 'DungGeunMo', sans-serif;
+        color: rgb(255, 253, 114);
+        background-color: transparent;
+        border: none;
+        font-size: large;
+        pointer-events: all;
+    };
+}
+#treasure-paper.hidden {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+}
