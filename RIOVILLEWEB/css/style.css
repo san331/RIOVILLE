@@ -268,38 +268,38 @@ body, html {
 #music-forest {
     position: absolute;
     width: 40vw;
-    top: 37%;
-    right: 0;
+    top: 28%;
+    right: 27%;
     filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
 }
 #rioballoon {
     position: absolute;
     width: 18vw;
-    top: 45%;
-    right: 38%;
+    top: 48%;
+    right: 39%;
     filter: drop-shadow(0 5px 8px white)
 }
 #camp1 {
     position: absolute;
     width: 20vw;
-    top: 45%;
-    left: 20%;
+    top: 48%;
+    left: 22%;
     z-index: 30;
     filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
 }
 #camp2 {
     position: absolute;
     width: 20vw;
-    top: 54%;
-    left: 34%;
+    top: 58%;
+    left: 38%;
     z-index: 30;
     filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
 }
 #camp3 {
     position: absolute;
     width: 20vw;
-    top: 37%;
-    left: 35%;
+    top: 50%;
+    left: 60%;
     z-index: 30;
     filter: drop-shadow(0 5px 3px rgb(22, 93, 22));
 }
