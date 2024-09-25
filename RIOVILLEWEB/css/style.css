@@ -224,6 +224,7 @@ body, html {
     position: absolute;
     width: 100%;
     z-index: 0;
+    pointer-events: none;
 }
 
 .booth-icons {
@@ -232,6 +233,9 @@ body, html {
         background-color: transparent;
         border: none;
     }
+}
+#treasures {
+    z-index: 10;
 }
 #treasure1 {
     position: absolute;
@@ -438,7 +442,7 @@ body, html {
         font-family: 'DungGeunMo', sans-serif;
         color: rgb(255, 253, 114);
         background-color: transparent;
-        border: rgb(255, 253, 114) solid 2px;
+        border: none;
         font-size: large;
         pointer-events: all;
     };
